@@ -1,0 +1,55 @@
+#Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.sqlite3
+*.db
+chat_history.json
+
+# VSCode & IDES
+.vscode/
+.idea/
+*.swp
+
+
+# Environment variables
+.env
+.env.*
+
+
+# Lang Chain /Chroma DB storage
+data/**/chromadb/
+data/chroma_store/
+
+
+# Logs
+*.log
+
+
+# OS-generated files
+.DS_Store
+Thumbs.DB
+
+
+# Pytest
+.cache
+*.cover
+.coverage
+htmlcov/
+.tox/
+pytest_cache/
+
+# Packaging & Docker
+*.tar
+*.gz
+*.whl
+*.egg-info/
+dist/
+build/
+EOF
+
