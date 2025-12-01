@@ -23,8 +23,12 @@ chat_history.json
 
 
 # Lang Chain /Chroma DB storage
-data/**/chromadb/
-data/chroma_store/
+data/
+data/*/chroma_db/
+data/chroma_db/
+data/*/*.bin
+*.bin
+
 
 
 # Logs
