@@ -1,7 +1,7 @@
 # FastAPI & Server
 fastapi==0.110.0
 uvicorn==0.29.0
-python-dev==1.0.1
+
 
 # Database
 SQLAlchemy==2.0.29
