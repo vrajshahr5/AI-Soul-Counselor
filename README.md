@@ -84,6 +84,40 @@ API Documentation
 -
 The FastAPI backend provides an interactive Swagger UI for live endpoint testing at /docs. Authentication is supported directly in Swagger using JWT Bearer tokens.
 
+Installation Steps
+-
+1) Clone the Repository
+ git clone https://github.com/vrajshahr5/AI-Soul-Counselor.git
+cd AI-Soul-Counselor
+
+2) Create and Activate Virtual Enviornment
+python -m venv venv
+source venv/bin/activate
+venv\Scripts\activate
+
+3) Install Dependencies
+pip install -r requirements.txt
+
+4) Configue Environment variables
+OPENAI_API_KEY=your_openai_key
+JWT_SECRET_KEY=your_secret_key
+DATABASE_URL=sqlite:///./app.db
+CHROMADB_PATH=./chroma
+
+5) Run Alembic Migrations
+alembic upgrade head
+
+6) Start the Backend Server
+uvicorn app.main:app --reload
+
+The API will be avaliable at http://127.0.0.1:8000/docs
+
+Docker Deployment (Local Simulation)
+docker build -t ai-soul-counselor
+docker run -p 8000:8000 --env-file .env ai-soul-counselor
+
+
+
 
   
 
