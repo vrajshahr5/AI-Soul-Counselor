@@ -93,7 +93,7 @@ Open your terminal and run:
 git clone https://github.com/vrajshahr5/AI-Soul-Counselor.git
 cd AI-Soul-Counselor
 
-### 2. Create and Activate Virtual Environment
+### Create and Activate Virtual Environment
 
 Create a virtual environment:
 
@@ -110,11 +110,11 @@ Activate it using the command for your operating system:
 - Windows PowerShell:
   .\venv\Scripts\activate
 
-### 3. Install Dependencies
+### Install Dependencies
 
 pip install -r requirements.txt
 
-### 4. Configure Environment Variables
+### Configure Environment Variables
 
 Create a file named `.env` in the project root directory with the following contents:
 
@@ -125,15 +125,15 @@ CHROMADB_PATH=./chroma
 
 Replace `your_openai_key` and `your_secret_key` with your actual credentials.
 
-### 5. Run Alembic Migrations
+### Run Alembic Migrations
 
 alembic upgrade head
 
-### 6. Start the Backend Server
+### Start the Backend Server
 
 uvicorn app.main:app --reload
 
-### 7. Access the API
+### Access the API
 
 Once the server is running, open your browser and navigate to:
 
