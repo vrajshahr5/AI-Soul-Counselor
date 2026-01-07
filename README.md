@@ -85,7 +85,8 @@ API Documentation
 The FastAPI backend provides an interactive Swagger UI for live endpoint testing at /docs. Authentication is supported directly in Swagger using JWT Bearer tokens.
 
 Installation Steps
-. Clone the Repository
+-
+Clone the Repository
 
 Open your terminal and run:
 
