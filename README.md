@@ -87,7 +87,6 @@ The FastAPI backend provides an interactive Swagger UI for live endpoint testing
 #### Example cURL Request
 
 curl -X 'POST' \
-  'http://127.0.0.1:8000/chat' \
   -H 'accept: application/json' \
   -H 'Authorization: Bearer <jwt_token>' \
   -H 'Content-Type: application/json' \
@@ -102,6 +101,8 @@ curl -X 'POST' \
   "user_id": 24,
   "metadata": null
 }
+
+---
 
 ### Response Codes
 
