@@ -80,9 +80,37 @@ Deployment
 + Enviornment configured with PostgreSQL Lite and ChromaDB
 + Live API accessible at: https://ai-soul-counsler.onrender.com/
 
-API Documentation
+API Documentation/Example
 -
 The FastAPI backend provides an interactive Swagger UI for live endpoint testing at /docs. Authentication is supported directly in Swagger using JWT Bearer tokens.
+
+#### Example cURL Request
+
+curl -X 'POST' \
+  'http://127.0.0.1:8000/chat' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer <jwt_token>' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "text": "Tell me something about my last message"
+}'
+
+#### Sample Successful Response
+
+{
+  "response": "It sounds like you're feeling quite overwhelmed about your exam. It's completely normal to experience stress in situations like this. If you'd like, we can talk about some strategies to help manage that stress or ways to prepare effectively. What do you think?",
+  "user_id": 24,
+  "metadata": null
+}
+
+### Response Codes
+
+- `200 OK` – Request processed successfully  
+- `401 Unauthorized` – JWT token missing or invalid  
+- `422 Validation Error` – Incorrect request format  
+- `500 Server Error` – Internal processing issue  
+
+---
 
 Installation Steps
 -
