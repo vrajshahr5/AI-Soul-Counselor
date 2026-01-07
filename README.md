@@ -99,12 +99,15 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 4) Configue Environment variables
-OPENAI_API_KEY=your_openai_key JWT_SECRET_KEY=your_secret_key DATABASE_URL=sqlite:///./app.db CHROMADB_PATH=./chroma
+OPENAI_API_KEY=your_openai_key
+JWT_SECRET_KEY=your_secret_key
+DATABASE_URL=sqlite:///./app.db
+CHROMADB_PATH=./chroma
 
-5) Run Alembic Migrations
+6) Run Alembic Migrations
 alembic upgrade head
 
-6) Start the Backend Server
+7) Start the Backend Server
 uvicorn app.main:app --reload
 
 The API will be avaliable at http://127.0.0.1:8000/docs
