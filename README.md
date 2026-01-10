@@ -40,9 +40,33 @@ Chat Flow
 7) Response stored and returned
 
 Backend Archeticture
-![IMG_3580](https://github.com/user-attachments/assets/61f5830e-c25d-44e4-9e5d-311f283aa435)
-
-
+-
+``` text
+AI-SOUL-COUNSELOR/
+│
+├── app/
+│   ├── main.py                 # FastAPI app entrypoint, router registration, OpenAPI config
+│
+│   ├── auth.py                 # Authentication routes (login / register)
+│   ├── auth_dependency.py      # JWT auth dependencies
+│   ├── protected_routes.py     # Auth-protected endpoints
+│
+│   ├── routes_chat.py          # Chat endpoints
+│   ├── routes_soul.py          # Soul interaction endpoints
+│   ├── routes_history.py       # Conversation history endpoints
+│
+│   ├── chains.py               # LangChain / prompt orchestration
+│   ├── vector_store.py         # Vector memory & retrieval logic
+│
+│   ├── models.py               # Database models
+│   ├── schemas.py              # Pydantic request / response schemas
+│   ├── database.py             # Database connection & session handling
+│   ├── utilities.py            # Shared helper utilities
+│
+├── requirements.txt
+├── Dockerfile
+├── README.md
+```
 Design Principles
 -
 + Modular routers with dependency layer security
