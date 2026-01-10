@@ -90,7 +90,7 @@ Local Development Documentation
 After Running the server locally, the same documentation is avaliable at: http://127.0.0.1:8000/docs
 
 #### Example cURL Request
-
+```
 curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Authorization: Bearer <jwt_token>' \
@@ -98,15 +98,17 @@ curl -X 'POST' \
   -d '{
   "text": "Tell me something about my last message"
 }'
+```
 
 #### Sample Successful Response
 
+```json
 {
   "response": "It sounds like you're feeling quite overwhelmed about your exam. It's completely normal to experience stress in situations like this. If you'd like, we can talk about some strategies to help manage that stress or ways to prepare effectively. What do you think?",
   "user_id": 24,
   "metadata": null
 }
-
+```
 ### Response Codes
 
 - `200 OK` – Request processed successfully  
